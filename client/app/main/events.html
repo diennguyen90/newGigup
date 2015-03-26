@@ -1,0 +1,57 @@
+<div class='container'>
+	<div class='hero-unit'>
+			<h1>List of Events!</h1>
+				<img src='https://g.twimg.com/business/tactic/image/Events.png'>
+				<br>
+				<input type='text' ng-model='searchBar' placeholder='search'>
+				<button type='submit' class='btn btn-sm btn-info' ng-click='search()'>Go</button>
+				<hr>
+				<!-- Create new event form -->
+				<p>Create an Event</p>
+				<form>
+				<input type='text' ng-model='newEventName' placeholder=' Name'>
+			     
+				<input type='text' ng-model='newEventType' placeholder=' Type'>
+			     
+				<input type='date' ng-model='newEventTime' placeholder=' Time'>
+			     
+				<input type='text' ng-model='newEventAddress' placeholder=' Address'>
+			     
+				<input type='text' ng-model='newEventDescription' placeholder=' Description'>
+			     
+				<button type='submit' class='btn btn-sm btn-info' ng-click='addEvent()'>Bam</button>
+			     
+				</form>
+
+				<hr>
+			</div>
+
+
+	<!-- list of events -->
+			<div class='container'>
+				 <div class='row'>
+				 	
+				 	<!-- updating -->
+				 		<div class='box nav nav nav-stacked col-md-4 col-lg-4 col-sm-6' ng-init='update=false' ng-repeat='event in eventList'>
+				 			<!-- name update -->
+						     <li ng-hide='update' ng-click='update=true'><h4 class='text-center'><a href='/eventDetails'>{{event.name}}</a></h4></li>
+						     <li ng-show='update'><input type='text' ng-model='event.Name'></li>
+					     	<!-- type update -->
+					        <li ng-hide='update' ng-click='update=true'><strong>{{event.type}}</strong></li>
+					        <li ng-show='update'><input type='text' ng-model='event.Type'></li>
+					        <!-- description update -->
+					        <li ng-hide='update' ng-click-'update=true'><i>{{event.description}}</i></li>
+					        <li ng-show='update'><input class='deBox' type='text' ng-model='event.Description'></li>
+					        <!-- update button -->
+					        <li ng-show='update'><button type='button' ng-click='updateEvent(event);update=false'>Update</button></li>
+					        <!-- cancel button -->
+					         <li ng-show='update'><button type='button' ng-click='update=false'>Cancel</button></li>
+
+					        <button type='button' class='btn btn-xs btn-danger' ng-click='removeEvent(event)' aria-label='Right Align'>
+					        	<span class='glyphicon glyphicon-minus' aria-hidden='true'></span>
+					        </button>
+					    </div>
+				</div>
+	    	</div>
+
+</div>
