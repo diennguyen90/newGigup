@@ -15,8 +15,8 @@ angular.module('diennguyenApp')
       	templateUrl:'app/main/signup.html',
       	controller: 'SignupCtrl'
       })
-      .when('/eventDetails', {
+      .when('/eventDetails/:name', {
         templateUrl: 'app/main/eventDetail.html',
-        controller: 'EventCtrl'
+        controller: 'EventDetailCtrl'
       });
   });

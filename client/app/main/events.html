@@ -34,7 +34,7 @@
 				 	<!-- updating -->
 				 		<div class='box nav nav nav-stacked col-md-4 col-lg-4 col-sm-6' ng-init='update=false' ng-repeat='event in eventList'>
 				 			<!-- name update -->
-						     <li ng-hide='update' ng-click='update=true'><h4 class='text-center'><a href='/eventDetails'>{{event.name}}</a></h4></li>
+						     <li ng-hide='update' ng-click='update=true'><h4 class='text-center'><a href='/eventDetails/{{event.name}}'>{{event.name}}</a></h4></li>
 						     <li ng-show='update'><input type='text' ng-model='event.Name'></li>
 					     	<!-- type update -->
 					        <li ng-hide='update' ng-click='update=true'><strong>{{event.type}}</strong></li>
