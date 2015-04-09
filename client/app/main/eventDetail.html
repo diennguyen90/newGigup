@@ -1,6 +1,12 @@
-<div ng-repeat='event in events'>
-	<ul>
-		<li>{{event.name}}</li>
-		<li>{{event.description}}</li>
-	</ul>
+<div class='container' ng-repeat='event in events'>
+
+	<h1>{{event.name}}</h1>
+		<p>{{event.type}}</p>
+	<hr>
+
+	<div class='col-sm-8'>
+	{{event.description}}
+	</div>
+
+
 </div>
