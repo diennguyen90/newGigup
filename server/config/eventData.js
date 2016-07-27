@@ -1,7 +1,7 @@
 
 'use strict';
 
-var Event = require('../api/events/event.model');
+var Event = require('../api/event/event.model');
 
 
 Event.find({}).remove(function() {

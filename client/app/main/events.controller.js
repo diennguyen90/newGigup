@@ -18,7 +18,7 @@ angular.module('diennguyenApp')
     $scope.addEvent = function() {
       if($scope.newEventName === '' || $scope.newEventType === '' || $scope.newEventTime === ''|| $scope.newEventAddress === ''|| $scope.newEventDescription === '') {
         return;
-      };
+      }
       $http.post('/api/events', { name: $scope.newEventName, type: $scope.newEventType, time: $scope.newEventTime, address: $scope.newEventAddress, description: $scope.newEventDescription });
 
       $scope.newEventName = '';
@@ -43,7 +43,7 @@ angular.module('diennguyenApp')
    	$http.delete('/api/events/' + event._id).success(function(){
    		$http.get('/api/events').success(function(events){
    			$scope.events = events;
-   		})
+   		});
    	});
    };
 });

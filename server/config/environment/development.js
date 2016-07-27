@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://dien:123@ds045531.mongolab.com:45531/gigup'
+    uri: 'mongodb://dien123:1234@ds013162.mlab.com:13162/gigups'
   },
 
   seedDB: true

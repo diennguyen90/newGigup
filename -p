@@ -1,0 +1,6 @@
+MongoDB shell version: 3.0.0
+connecting to: ds013162.mlab.com:13162/gigups
+2016-06-02T14:53:17.056-0700 E QUERY    Error: 18 Authentication failed.
+    at DB._authOrThrow (src/mongo/shell/db.js:1236:32)
+    at (auth):5:8
+    at (auth):6:2 at src/mongo/shell/db.js:1236
